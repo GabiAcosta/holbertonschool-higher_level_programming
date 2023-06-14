@@ -1,0 +1,27 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix_divided([[2], [2]], 2)
+[[1.0], [1.0]]
+
+>>> matrix_divided([[2.3], [2]], 2)
+[[1.15], [1.0]]
+
+>>> matrix_divided([[2], [2]], "hola")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided([[2], [2]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided([[2], [2]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided([[2], ["hola"]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
