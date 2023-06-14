@@ -25,3 +25,7 @@ ZeroDivisionError: division by zero
 >>> matrix_divided([[2], ["hola"]], 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(2, 2)
+Traceback (most recent call last):
+TypeError: 'int' object is not subscriptable
