@@ -1,0 +1,21 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Lorem ipsum dolor sit amet? consectetur: adipiscing elit.")
+Lorem ipsum dolor sit amet?
+<BLANKLINE>
+consectetur:
+<BLANKLINE>
+adipiscing elit.
+<BLANKLINE>
+
+>>> text_indentation(4)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("hola", "hola 2")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
