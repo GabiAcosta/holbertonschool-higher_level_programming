@@ -175,9 +175,9 @@ class Rectangle:
 
         """
         if not isinstance(rect_1, Rectangle):
-            raise type("rect_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise type("rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         area1 = rect_1.area()
         area2 = rect_2.area()
         if area1 == area2:
