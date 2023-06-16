@@ -1,9 +1,16 @@
 #!/usr/bin/python3
-"""Task 5"""
+"""Task 6"""
 
 
 class Rectangle:
-    """ Class that defines a rectangle """
+    """
+    Class that defines a rectangle.
+
+    Attributes:
+        number_of_instances (int): The number of instances of the
+        Rectangle class.
+    """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -18,6 +25,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -140,4 +148,5 @@ class Rectangle:
             None.
 
         """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
