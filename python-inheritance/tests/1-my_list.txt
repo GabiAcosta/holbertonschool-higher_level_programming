@@ -1,0 +1,13 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList(1)
+Traceback (most recent call last):
+TypeError: 'int' object is not iterable
+
+>>> my_list = MyList("hola")
+>>> my_list.print_sorted()
+['a', 'h', 'l', 'o']
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
