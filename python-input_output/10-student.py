@@ -37,7 +37,7 @@ class Student:
             dict: A dictionary representation of the student object.
 
         """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         dic = {}
         for i in attrs:
