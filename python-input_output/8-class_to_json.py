@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """Task 8"""
-import json
 
 
 def class_to_json(obj):
     """
-    Converts a Python object to a JSON string representation.
+    Converts a Python object to a JSON serializable dictionary.
 
     Args:
         obj: The object to be converted.
 
     Returns:
-        str: A JSON string representation of the object.
+        dict: A dictionary representation of the object that can be
+        serialized to JSON.
 
     """
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
