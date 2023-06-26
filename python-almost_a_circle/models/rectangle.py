@@ -144,8 +144,10 @@ class Rectangle(Base):
         Updates the attributes of the rectangle.
 
         Args:
-            *args: New values for the rectangle's attributes as positional arguments.
-            **kwargs: New values for the rectangle's attributes as keyword arguments.
+            *args: New values for the rectangle's attributes as positional
+            arguments.
+            **kwargs: New values for the rectangle's attributes as keyword
+            arguments.
         """
         if args and len(args) != 0:
             attrs = ['id', 'width', 'height', 'x', 'y']
