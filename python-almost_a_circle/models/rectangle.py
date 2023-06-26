@@ -116,9 +116,16 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Prints a representation of the rectangle using '#' characters.
+        Prints a visual representation of the rectangle.
+
+        The rectangle is represented using '#' characters. The position of the
+        rectangle is determined by the `x` and `y` attributes.
         """
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
+            for _ in range(self.__x):
+                print(" ", end="")
             for _ in range(self.__width):
                 print("#", end="")
             print()
