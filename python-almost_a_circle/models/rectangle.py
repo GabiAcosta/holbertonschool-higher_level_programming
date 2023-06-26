@@ -19,14 +19,19 @@ class Rectangle(Base):
             id (int): The ID of the rectangle. If not provided, the ID is
             automatically assigned based on the current number of instances.
 
+        Raises:
+            TypeError: If the input is not an integer.
+            ValueError: If width or height is under or equals 0.
+            ValueError: If x or y is under 0.
+
         Returns:
             None.
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -40,6 +45,10 @@ class Rectangle(Base):
         """
         Setter method for the width of the rectangle.
         """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -54,6 +63,10 @@ class Rectangle(Base):
         """
         Setter method for the height of the rectangle.
         """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -68,6 +81,10 @@ class Rectangle(Base):
         """
         Setter method for the x-coordinate of the rectangle's position.
         """
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -82,4 +99,8 @@ class Rectangle(Base):
         """
         Setter method for the y-coordinate of the rectangle's position.
         """
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
