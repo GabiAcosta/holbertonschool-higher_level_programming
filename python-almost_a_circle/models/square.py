@@ -58,7 +58,7 @@ class Square(Rectangle):
             arguments.
         """
         if args and len(args) != 0:
-            attrs = ['id', 'width', 'height', 'x', 'y']
+            attrs = ['id', 'size', 'x', 'y']
             for arg, attr in zip(args, attrs):
                 setattr(self, attr, arg)
         else:
