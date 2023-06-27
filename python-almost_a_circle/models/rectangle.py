@@ -161,4 +161,10 @@ class Rectangle(Base):
         """
         Returns a dictionary representation of the square.
         """
-        return self.__dict__
+        return {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+        }
