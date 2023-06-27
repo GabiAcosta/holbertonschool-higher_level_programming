@@ -156,3 +156,9 @@ class Rectangle(Base):
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
+
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation of the square.
+        """
+        return self.__dict__
