@@ -80,7 +80,7 @@ class Base:
             list: A list of dictionaries representing the JSON data. If the
                 input string is None, it returns an empty list.
         """
-        if json_string is None:
+        if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
