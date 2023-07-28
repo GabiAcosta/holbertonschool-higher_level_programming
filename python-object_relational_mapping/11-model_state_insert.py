@@ -14,10 +14,10 @@ if __name__ == "__main__":
     session = Session()
     new_state = insert(State).values(name="Louisiana")
     new_state.compile()
-    
+
     with engine.connect() as conn:
         conn.execute(new_state)
         conn.commit()
-        
+
     states = session.query(State).order_by(State.id).all()
     print(states[-1].id)
